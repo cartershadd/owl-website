@@ -94,7 +94,7 @@
 }
 
 .scrolling {
-  height: 65%;
+  height: 400px;
   padding: 15px;
   display: grid;
 }
@@ -135,15 +135,17 @@
 .profile-preview {
   padding: 1rem 0.25rem 1rem 0.25rem;
   border: #ccc 1px ridge;
-  margin: 0.7rem 0;
+  margin: 0.5rem;
   vertical-align: top;
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  height: 263px;
+  width: 320px;
 }
 
 .profile-preview-name {
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   padding: 0.2rem;
 }
@@ -156,9 +158,23 @@
   margin-right: auto;
 }
 
-.fa-feather-alt {
+.fa-phoenix-framework {
   display: block;
   padding: 0.25rem;
-  margin-left: auto;
   margin-right: auto;
+}
+
+/*Profile formatting*/
+.about {
+  margin: auto;
+}
+
+.facts {
+ margin: auto;
+}
+
+/*Search*/
+.search-results {
+  display: flex;
+  flex-direction: column;
 }
