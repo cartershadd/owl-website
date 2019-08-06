@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 class Search extends Component {
     state = {
         text: '',
-        owlList: [
+        animalList: [
             {
                 id: 1,
                 name: 'Barn Owl',
@@ -56,17 +56,73 @@ class Search extends Component {
                 ],
                 about: 'The eastern screech owl looks like a mini version of the great horned owl.',
                 facts: 'The eastern screech owl can be grey or red. They are approximately the same size as a robin.',
+            },
+            {
+                id: 5,
+                name: 'Tiger Salamander',
+                img: [
+                    process.env.PUBLIC_URL + '/images/tiger1.jpg',
+                    process.env.PUBLIC_URL + '/images/tiger2.png',
+                    process.env.PUBLIC_URL + '/images/tiger3.jpg',
+                    process.env.PUBLIC_URL + '/images/tiger4.jpg',
+                    process.env.PUBLIC_URL + '/images/tiger5.jpg'
+                ],
+                about: 'The tiger salamander has stripes and an adorable smile. They can live up to 25 years old!',
+                facts: 'Salamanders are amphibians and undergo metamorphosis like frogs and toads do,' +
+                    'although there are some exceptions.'
+            },
+            {
+                id: 6,
+                name: 'Marbled Salamander',
+                img: [
+                    process.env.PUBLIC_URL + '/images/marbled1.jpg',
+                    process.env.PUBLIC_URL + '/images/marbled2.jpg',
+                    process.env.PUBLIC_URL + '/images/marbled3.jpg',
+                    process.env.PUBLIC_URL + '/images/marbled4.jpg',
+                    process.env.PUBLIC_URL + '/images/marbled5.jpg'
+                ],
+                about: 'The marbled salamander has beautiful black and white markings that vary from ' +
+                    'salamander to salamander.',
+                facts: 'The female marbled salamander will guard her eggs until they hatch.'
+            },
+            {
+                id: 7,
+                name: 'Slimy Salamander',
+                img: [
+                    process.env.PUBLIC_URL + '/images/slimy1.jpg',
+                    process.env.PUBLIC_URL + '/images/slimy2.jpg',
+                    process.env.PUBLIC_URL + '/images/slimy3.jpg',
+                    process.env.PUBLIC_URL + '/images/slimy4.jpg',
+                    process.env.PUBLIC_URL + '/images/slimy5.jpg'
+                ],
+                about: 'There are several genetically distinct species of Slimy Salamander' +
+                    'in Georgia alone, many of which have subtle physical differences (or none at all).',
+                facts: 'Slimy salamanders lay eggs on land, and once the larvae metamorphose, they resemble the adults.'
+            },
+            {
+                id: 8,
+                name: 'Red Salamander',
+                img: [
+                    process.env.PUBLIC_URL + '/images/red1.jpg',
+                    process.env.PUBLIC_URL + '/images/red2.jpg',
+                    process.env.PUBLIC_URL + '/images/red3.jpg',
+                    process.env.PUBLIC_URL + '/images/red4.jpg',
+                    process.env.PUBLIC_URL + '/images/red5.jpg'
+                ],
+                about: 'The red salamander is found throughout the eastern United States, and thankfully they are quite common and so far,' +
+                    'their populations remain intact.',
+                facts: 'It takes 2 to 3 years for red salamander larvae to metamorphose.'
             }
         ],
-        filteredOwlList: [],
+        filteredAnimalList: [],
         showNoResults: false,
     };
 
 
     Search = (searchTerm) => {
-        let filteredOwlList = this.state.owlList.filter(owl =>
-            owl.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
-        this.setState({filteredOwlList: filteredOwlList});
+        let filteredAnimalList = this.state.animalList.filter(animal =>
+            animal.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
+        this.setState({filteredAnimalList: filteredAnimalList});
     };
 
     onSubmit = (e) => {
@@ -93,17 +149,13 @@ class Search extends Component {
                     />
                 </form>
                 <div className="search-results">
-                    {this.state.filteredOwlList.map((owl, index) => {
-                        return <div key={index} className="owl-preview">
-                            <Link to={"/owl/" + owl.id} className="profile-preview">
-                                <span className="profile-preview-name">{owl.name}</span>
-                                <img src={owl.img[1]} alt="owl" className="owl-img"/>
+                    {this.state.filteredAnimalList.map((animal, index) => {
+                        return <div key={index} className="animal-preview">
+                            <Link to={"/animal/" + animal.id} className="profile-preview">
+                                <span className="profile-preview-name">{animal.name}</span>
+                                <img src={animal.img[1]} alt="animal" className="animal-img"/>
 
-                                <div className="feather-wrapper">
-                                    <i className="fas fa-feather-alt"/>
-                                    <i className="fas fa-feather-alt"/>
-                                    <i className="fas fa-feather-alt"/>
-                                </div>
+                                <div className="icon-wrapper"></div>
                             </Link>
                         </div>
                     })}
