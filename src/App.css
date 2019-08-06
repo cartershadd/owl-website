@@ -45,7 +45,7 @@
   width: 100%;
   opacity: 0.9;
   margin-bottom: 1rem;
-  background-color: #426242;
+  background-color: #7ea75e;
 }
 
 .navBar ul {
@@ -54,7 +54,7 @@
 }
 
 .navBar a {
-  color: darkblue;
+  color: #1b3797;
   padding: 0.5rem;
   margin: 0 0.25rem;
   align-self: center;

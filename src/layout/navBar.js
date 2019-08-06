@@ -15,6 +15,9 @@ const NavBar = () => {
                         <Link to="/owl">Owls</Link>
                     </li>
                     <li>
+                        <Link to="/fox">Foxes</Link>
+                    </li>
+                    <li>
                         <Link to="/salamander">Salamanders</Link>
                     </li>
                     <li>

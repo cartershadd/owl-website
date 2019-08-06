@@ -10,6 +10,8 @@ import SalamanderProfile from './components/salamanders/SalamanderProfile';
 import Search from "./layout/Search";
 import FrogProfile from "./components/frogs/FrogProfile";
 import FrogPreview from "./components/frogs/FrogPreview";
+import FoxPreview from "./components/foxes/FoxPreview";
+import FoxProfile from "./components/foxes/FoxProfile";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                         <Route exact path='/about' component={About}/>
                         <Route exact path='/owl' component={OwlPreview}/>
                         <Route exact path='/owl/:id' component={OwlProfile}/>
+                        <Route exact path='/fox' component={FoxPreview}/>
+                        <Route exact path='/fox/:id' component={FoxProfile}/>
                         <Route exact path='/salamander' component={SalamanderPreview}/>
                         <Route exact path='/salamander/:id' component={SalamanderProfile}/>
                         <Route exact path='/frog' component={FrogPreview}/>
