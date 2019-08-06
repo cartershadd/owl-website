@@ -8,6 +8,8 @@ import OwlProfile from "./components/owls/OwlProfile";
 import SalamanderPreview from './components/salamanders/SalamanderPreview';
 import SalamanderProfile from './components/salamanders/SalamanderProfile';
 import Search from "./layout/Search";
+import FrogProfile from "./components/frogs/FrogProfile";
+import FrogPreview from "./components/frogs/FrogPreview";
 
 function App() {
     return (
@@ -22,6 +24,8 @@ function App() {
                         <Route exact path='/owl/:id' component={OwlProfile}/>
                         <Route exact path='/salamander' component={SalamanderPreview}/>
                         <Route exact path='/salamander/:id' component={SalamanderProfile}/>
+                        <Route exact path='/frog' component={FrogPreview}/>
+                        <Route exact path='/frog/:id' component={FrogProfile}/>
                     </Switch>
                 </div>
 
