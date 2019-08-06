@@ -66,19 +66,19 @@ class OwlPreview extends Component {
         return (
 
             this.state.owlList.map((owl, index) =>
-                    <div className="owl-preview">
+                    <div className="animal-preview">
                         <Link to={"/owl/" + owl.id} className="profile-preview">
                             <span className="profile-preview-name">{owl.name}</span>
-                            <img src={owl.img[1]} alt="owl" className="owl-img"/>
+                            <img src={owl.img[1]} alt="owl" className="animal-img"/>
 
-                            <div className="feather-wrapper">
+                            <div className="icon-wrapper">
                                 <i className="fas fa-feather-alt"/>
                                 <i className="fas fa-feather-alt"/>
                                 <i className="fas fa-feather-alt"/>
+
                             </div>
                         </Link>
                     </div>
-
             ))
 
     }
