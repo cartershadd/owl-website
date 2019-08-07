@@ -16,7 +16,7 @@ import FoxProfile from "./components/foxes/FoxProfile";
 function App() {
     return (
         <Router>
-            <div className="App">
+            <div className="app">
                 <NavBar/>
                 <div className="container">
                     <Switch>

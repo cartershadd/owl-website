@@ -45,7 +45,7 @@ class FrogProfile extends Component {
                         process.env.PUBLIC_URL + '/images/narrow4.jpg',
                         process.env.PUBLIC_URL + '/images/narrow5.jpg'
                     ],
-                    about: 'The Eastern Narrowmouth toad has a call similar to a bleating sheep. While not common, the female of the species can lay up to 700 eggs in a breeding event/',
+                    about: 'The Eastern Narrowmouth toad has a call similar to a bleating sheep. While not common, the female of the species can lay up to 700 eggs in a breeding event.',
                     facts: 'They also have an adorable narrow little face!'
                 },
                 {
