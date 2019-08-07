@@ -65,7 +65,8 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: left;
 }
 
@@ -80,11 +81,7 @@
 
 /*Allows users to scroll through images on each owl's page*/
 .scrolling-container {
-    display: grid;
-    grid-gap: 10px;
-    grid-column: 2 / -2;
-    grid-template-columns: repeat(5, 30%);
-    grid-template-rows: minmax(150px, 1fr);
+    display: flex;
     overflow: hidden;
     overflow-x: scroll;
     scroll-snap-type: x proximity;
@@ -112,6 +109,8 @@
 }
 
 .scrolling-img {
+    object-fit: cover;
+    margin: 10px;
     border-radius: 8px;
     height: 100%;
     width: 100%;
@@ -162,7 +161,6 @@
 .fa-phoenix-framework {
     display: block;
     padding: 0.25rem;
-    margin-right: auto;
 }
 
 /*Profile formatting*/
@@ -237,11 +235,6 @@
         padding-bottom: 15px;
         margin-bottom: -5px;
         width: 100%;
-    }
-
-    .scrolling-img {
-        width: 200px;
-        height: 220px;
     }
 
     .about, .facts {
@@ -344,11 +337,6 @@
         width: 100%;
     }
 
-    .scrolling-img {
-        width: 200px;
-        height: 220px;
-    }
-
     .about, .facts {
         font-size: small;
         padding: 0.25rem;
@@ -416,11 +404,6 @@
         padding-bottom: 15px;
         margin-bottom: -5px;
         width: 100%;
-    }
-
-    .scrolling-img {
-        width: 200px;
-        height: 220px;
     }
 
     .about, .facts {
@@ -496,11 +479,6 @@
         width: 100%;
     }
 
-    .scrolling-img {
-        width: 200px;
-        height: 220px;
-    }
-
     .about, .facts {
         font-size: medium;
         padding: 0.25rem;
@@ -574,11 +552,6 @@
         width: 100%;
     }
 
-    .scrolling-img {
-        width: 200px;
-        height: 220px;
-    }
-
     .about, .facts {
         font-size: medium;
         padding: 0.25rem;
@@ -643,7 +616,7 @@
         display: grid;
         grid-gap: 10px;
         grid-column: 2 / -2;
-        grid-template-columns: repeat(5, 25%);
+        grid-template-columns: repeat(5, 20%);
         grid-template-rows: minmax(150px, 1fr);
         overflow: hidden;
         overflow-x: scroll;
@@ -661,5 +634,26 @@
     .all-center {
         padding: 0.25rem;
         font-size: large;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    .scrolling-container {
+        display: grid;
+        grid-gap: 10px;
+        grid-column: 2 / -2;
+        grid-template-columns: repeat(5, 20%);
+        grid-template-rows: minmax(150px, 1fr);
+        overflow: hidden;
+        overflow-x: scroll;
+        scroll-snap-type: x proximity;
+        padding-bottom: 15px;
+        margin-bottom: -5px;
+        width: 100%;
+    }
+
+    .navBar a {
+        font-size: large;
+        padding: 0;
     }
 }
