@@ -3,8 +3,6 @@ import React, {Component} from 'react';
 class AnimalProfile extends Component {
     constructor(props) {
         super(props);
-        console.log("type:" + this.props.match.params.type);
-        console.log("id:" + this.props.match.params.id);
         this.state = {
             animalList: [
                 {
@@ -249,7 +247,7 @@ class AnimalProfile extends Component {
             this.state.animalList.filter(animal => animal.type === this.props.match.params.type && animal.id.toString() === this.props.match.params.id).map((animal, index) =>
             <div key={index} className="scrolling">
                 <div className="scrolling-container">
-                    <img className="scrolling-img" src={animal.img[0]} alt="animal" />
+                    <img key={index} className="scrolling-img" src={animal.img[0]} alt="animal" />
                     <img className="scrolling-img" src={animal.img[1]} alt="animal" />
                     <img className="scrolling-img" src={animal.img[2]} alt="animal" />
                     <img className="scrolling-img" src={animal.img[3]} alt="animal" />
