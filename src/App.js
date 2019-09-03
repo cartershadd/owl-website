@@ -14,7 +14,7 @@ function App() {
                 <NavBar/>
                 <div className="container">
                     <Switch>
-                        <Route exact path='/home' component={Search}/>
+                        <Route exact path='/' component={Search}/>
                         <Route exact path='/about' component={About}/>
                         <Route exact path='/:type' component={AnimalPreview}/>
                         <Route exact path='/:type/:id' component={AnimalProfile}/>
