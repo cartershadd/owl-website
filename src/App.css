@@ -2,21 +2,13 @@
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.app {
-    width: 100%;
-    height: 100%;
-}
+/*.app {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 
-
-.badge {
-    display: inline-block;
-    font-size: 0.8rem;
-    padding: 0.2rem 0.7rem;
-    text-align: center;
-    margin: 0.3rem;
-    background: wheat;
-    color: #333;
-    border-radius: 5px;
+a {
+    color: black;
 }
 
 .all-center {
@@ -29,54 +21,17 @@
     text-align: center;
 }
 
-.card {
-    padding: 1rem;
-    border: #ccc 1px dotted;
-    margin: 0.7rem 0;
+/*  Navbar*/
+.mr-auto {
+    float: right;
 }
 
-/* Navigation */
-.navBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.25rem;
-    z-index: 1;
-    width: 100%;
-    opacity: 0.9;
-    margin-bottom: 1rem;
-    background-color: #7ea75e;
+.mr-auto a {
+    color: black;
 }
 
-.navBar ul {
-    display: flex;
-    list-style: none;
-}
-
-.navBar a {
-    color: #112c39;
-    padding: 0.5rem;
-    margin: 0 0.25rem;
-    align-self: center;
-    text-decoration: none;
-}
-
-.icon {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: left;
-}
-
-.fab, .fas {
-    padding: 0.25rem;
-    margin: 0.25rem;
-}
-
-.navBar .welcome span {
-    margin-right: 0.6rem;
+.navbar-brand {
+    color: black;
 }
 
 /*Allows users to scroll through images on each owl's page*/
@@ -91,9 +46,10 @@
 }
 
 .scrolling {
-    height: 400px;
+    height: 70rem;
     padding: 15px;
     display: grid;
+    grid-template-columns: 100%;
 }
 
 .scrolling-container > li,
@@ -105,7 +61,8 @@
     justify-content: center;
     align-items: center;
     background: white;
-    border-radius: 8px;
+    border-radius: 2rem;
+    margin: 0.2rem;
 }
 
 .scrolling-img {
@@ -127,20 +84,20 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 75%;
-    height: 75%;
+    width: 25rem;
+    height: 20rem;
+    border-radius: 2rem;
 }
 
 .profile-preview {
     padding: 1rem 0.25rem 1rem 0.25rem;
-    border: #ccc 1px ridge;
     margin: 0.5rem;
     vertical-align: top;
     display: inline-block;
     text-align: center;
     text-decoration: none;
-    height: 263px;
-    width: 320px;
+    height: 30rem;
+    width: 35rem;
 }
 
 .profile-preview-name {
@@ -149,33 +106,18 @@
     padding: 0.2rem;
 }
 
-.icon-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.fa-phoenix-framework {
-    display: block;
-    padding: 0.25rem;
-}
-
 /*Profile formatting*/
 .about {
-    margin: auto;
+    margin: 0.25rem 0.25rem 0.25rem 0.25rem;
 }
 
 .facts {
-    margin: auto;
+    margin: 0.25rem 0.25rem 0.25rem 0.25rem;
 }
 
-/*Search*/
-.search-results {
-    display: flex;
-    flex-direction: column;
+/* Search */
+.search-wrapper {
+    margin: 0.5rem;
 }
 
 /*Media Screen Changes for Mobile*/
@@ -184,34 +126,6 @@
         width: 100%;
         height: 100%;
         overflow-x: hidden;
-    }
-
-    .icon {
-        width: 40px;
-    }
-
-    .navBar {
-        width: 100%;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-
-    .navBar ul {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navBar a {
-        font-size: 10px;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0.5rem;
-    }
-
-    .container {
-        width: 100%;
     }
 
     .animal-preview {
@@ -258,21 +172,6 @@
         width: 100%;
     }
 
-    .about, .facts {
-        font-size: small;
-        padding: 0.25rem;
-    }
-
-    .navBar a {
-        font-size: 10px;
-        padding: 0;
-    }
-
-    .icon {
-        width: 40px;
-        margin: 0.25rem;
-    }
-
     .all-center {
         padding: 0.25rem;
         font-size: medium;
@@ -280,40 +179,6 @@
 }
 
 @media screen and (min-width: 380px) and (max-width: 420px) {
-    .app {
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-    }
-
-    .icon {
-        width: 40px;
-    }
-
-    .navBar {
-        width: 100%;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-
-    .navBar ul {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navBar a {
-        font-size: small;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0.5rem;
-    }
-
-    .container {
-        width: 100%;
-    }
-
     .animal-preview {
         width: 90%;
         padding: 0.25rem;
@@ -335,11 +200,6 @@
         padding-bottom: 15px;
         margin-bottom: -5px;
         width: 100%;
-    }
-
-    .about, .facts {
-        font-size: small;
-        padding: 0.25rem;
     }
 
     .all-center {
@@ -355,34 +215,6 @@
         overflow-x: hidden;
     }
 
-    .icon {
-        width: 40px;
-    }
-
-    .navBar {
-        width: 100%;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-
-    .navBar ul {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navBar a {
-        font-size: small;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0.5rem;
-    }
-
-    .container {
-        width: 100%;
-    }
-
     .animal-preview {
         width: 90%;
         padding: 0.25rem;
@@ -405,16 +237,6 @@
         margin-bottom: -5px;
         width: 100%;
     }
-
-    .about, .facts {
-        font-size: small;
-        padding: 0.25rem;
-    }
-
-    .all-center {
-        padding: 0.25rem;
-        font-size: medium;
-    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 600px) {
@@ -422,38 +244,6 @@
         width: 100%;
         height: 100%;
         overflow-x: hidden;
-    }
-
-    .animal-img {
-        width: auto;
-    }
-
-    .icon {
-        width: 40px;
-    }
-
-    .navBar {
-        width: 100%;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-
-    .navBar ul {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navBar a {
-        font-size: medium;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0.5rem;
-    }
-
-    .container {
-        width: 100%;
     }
 
     .animal-preview {
@@ -479,11 +269,6 @@
         width: 100%;
     }
 
-    .about, .facts {
-        font-size: medium;
-        padding: 0.25rem;
-    }
-
     .all-center {
         padding: 0.25rem;
         font-size: large;
@@ -495,38 +280,6 @@
         width: 100%;
         height: 100%;
         overflow-x: hidden;
-    }
-
-    .animal-img {
-        width: auto;
-    }
-
-    .icon {
-        width: 40px;
-    }
-
-    .navBar {
-        width: 100%;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-
-    .navBar ul {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navBar a {
-        font-size: medium;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0.5rem;
-    }
-
-    .container {
-        width: 100%;
     }
 
     .animal-preview {
@@ -551,67 +304,15 @@
         margin-bottom: -5px;
         width: 100%;
     }
-
-    .about, .facts {
-        font-size: medium;
-        padding: 0.25rem;
-    }
-
-    .all-center {
-        padding: 0.25rem;
-        font-size: large;
-    }
 }
 
 @media screen and (min-width: 770px) and (max-width: 1030px) {
-    .app {
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-    }
-
-    .animal-img {
-        width: auto;
-    }
-
-    .icon {
-        width: 40px;
-    }
-
-    .navBar {
-        width: 100%;
-        margin-bottom: 0;
-        margin-right: 0;
-    }
-
-    .navBar ul {
-        width: 100%;
-        padding-left: 0;
-    }
-
-    .navBar a {
-        font-size: large;
-        padding: 0;
-    }
-
-    .search-bar {
-        margin: 0.5rem;
-    }
-
-    .container {
-        width: 100%;
-    }
-
     .animal-preview {
         width: 40%;
         padding: 0.25rem;
         margin: 0.25rem;
     }
 
-    .profile-preview {
-        width: 100%;
-    }
-
     .scrolling-container {
         display: grid;
         grid-gap: 10px;
@@ -624,36 +325,5 @@
         padding-bottom: 15px;
         margin-bottom: -5px;
         width: 100%;
-    }
-
-    .about, .facts {
-        font-size: medium;
-        padding: 0.25rem;
-    }
-
-    .all-center {
-        padding: 0.25rem;
-        font-size: large;
-    }
-}
-
-@media screen and (min-width: 1030px) {
-    .scrolling-container {
-        display: grid;
-        grid-gap: 10px;
-        grid-column: 2 / -2;
-        grid-template-columns: repeat(5, 20%);
-        grid-template-rows: minmax(150px, 1fr);
-        overflow: hidden;
-        overflow-x: scroll;
-        scroll-snap-type: x proximity;
-        padding-bottom: 15px;
-        margin-bottom: -5px;
-        width: 100%;
-    }
-
-    .navBar a {
-        font-size: large;
-        padding: 0;
     }
 }

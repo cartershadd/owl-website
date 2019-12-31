@@ -1,33 +1,40 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import {LinkContainer} from 'react-router-bootstrap';
 
 const NavBar = () => {
     return (
-            <nav className="navBar">
-                <h1 className="icon">
-                    <i className="fab fa-phoenix-framework"/>
-                </h1>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/owl">Owls</Link>
-                    </li>
-                    <li>
-                        <Link to="/fox">Foxes</Link>
-                    </li>
-                    <li>
-                        <Link to="/salamander">Salamanders</Link>
-                    </li>
-                    <li>
-                        <Link to="/frog">Frogs</Link>
-                    </li>
-                    <li>
-                        <Link to="/about">About</Link>
-                    </li>
-                </ul>
-            </nav>
+        <Navbar collapseOnSelect expand="*" bg="success" variant="success">
+            <Navbar.Brand href="/">
+                <i
+                    className="fab fa-phoenix-framework"
+                />
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                    <LinkContainer exact to="/">
+                        <Nav.Link>Home</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer exact to="/owl">
+                        <Nav.Link>Owls</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer exact to="/fox">
+                        <Nav.Link>Foxes</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer exact to="/salamander">
+                        <Nav.Link>Salamanders</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer exact to="/frog">
+                        <Nav.Link>Frogs</Nav.Link>
+                    </LinkContainer>
+                    <LinkContainer exact to="/about">
+                        <Nav.Link>About</Nav.Link>
+                    </LinkContainer>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 };
 

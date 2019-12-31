@@ -246,18 +246,14 @@ class AnimalPreview extends Component {
     render() {
         return (
             this.state.animalList.filter(animal => animal.type === this.props.match.params.type).map((animal, index) =>
-            <div key={index} className="animal-preview">
-                <Link to={`/${animal.type}/${animal.id}`} className="profile-preview" >
-                    <span className="profile-preview-name">{animal.name}</span>
+                <div key={index} className="animal-preview">
+                    <Link to={`/${animal.type}/${animal.id}`} className="profile-preview">
+                        <span className="profile-preview-name">{animal.name}</span>
                         <img src={animal.img[1]} alt="animal" className="animal-img"/>
+                    </Link>
 
-                        <div className="icon-wrapper">
-                            <i className="fab fa-phoenix-framework" />
-                        </div>
-                </Link>
-
-            </div>
-        ))
+                </div>
+            ))
     }
 }
 

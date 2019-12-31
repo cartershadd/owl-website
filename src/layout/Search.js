@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import Form from 'react-bootstrap/Form';
+import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
 
 class Search extends Component {
     state = {
@@ -257,29 +261,33 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
-                <form onSubmit={this.onSubmit} className="form">
-                    <input
-                        id="searchForm"
-                        ref="searchForm"
-                        type="text"
-                        name="text"
-                        placeholder="Search..."
-                        className="search-bar"
-                    />
-                    <input
-                        type="submit"
-                        value="Search"
-                        className="search-btn"
-                    />
-                </form>
+            <div className="search-wrapper">
+                <Form onSubmit={this.onSubmit}>
+                    <InputGroup>
+                        <FormControl
+                            id="searchForm"
+                            ref="searchForm"
+                            type="text"
+                            placeholder="Search..."
+                            className="search-bar"
+                        />
+
+                        <Button
+                            type="submit"
+                            variant="info"
+                            value="Search"
+                            className="search-btn"
+                        >
+                            Search
+                        </Button>
+                    </InputGroup>
+                </Form>
                 <div className="search-results">
                     {this.state.filteredAnimalList.map((animal, index) => {
                         return <div key={index} className="animal-preview">
                             <Link to={`/${animal.type}/${animal.id}`} className="profile-preview">
                                 <span className="profile-preview-name">{animal.name}</span>
                                 <img src={animal.img[1]} alt="animal" className="animal-img"/>
-
                             </Link>
                         </div>
                     })}
